@@ -2,6 +2,15 @@ import styles from './AcordionCard.module.css'
 import {useState} from "react";
 import AccordionItem from './AccordionItem';
 
+const contentAccordion = [
+        {
+            itemNumber: 1,
+            title: "Accordion title",
+            content: "111"
+        },
+        
+    ]
+;
 function AccordionCard (){
     const [activeAccordionNumber, setActiveAccordionNumber] = useState (null);
 
@@ -18,6 +27,15 @@ function AccordionCard (){
 
 
         return <div className={styles.cardContainer}>
+            {contentAccordion.map ((item) => (
+                <AccordionItem
+                    activeAccordionNumber={activeAccordionNumber}
+                    handleClick={handleClick}
+                    itemNumber={1}
+                    title="Accordion titile1"
+                    content="111"
+                />)
+            )},a
             <AccordionItem
                 activeAccordionNumber={activeAccordionNumber}
                 handleClick={handleClick}
