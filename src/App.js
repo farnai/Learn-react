@@ -1,9 +1,14 @@
 import './App.css';
+import AccordionCard from "./components/acordion/AccordionCard";
 
-import ChildComponent from "./components/Accordeon";
 
 function App() {
 
+   return(
+
+       <AccordionCard />
+
+   )
 }
 
 export default App;
